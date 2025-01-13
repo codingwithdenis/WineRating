@@ -1,0 +1,127 @@
+    <!DOCTYPE html>
+    <html lang="pt-br">
+      <head>
+        <title>Pontuador de vinhos</title>
+        <meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+	      </head>
+      <body>
+
+
+		<div class="colunaPonto">
+		    <h1 class="pontos" id="pontos">0.0</h1>
+		</div>
+					
+	      <div class="colunaCategorias">
+	      <p>
+	      <form action="/action_page.php">
+		  <label class="rotulo" class="categoria"> Gustativo</label><br>
+		  <input type="checkbox" class="item" id="acidez" value="0.1">
+		  <label class="rotulo" for="acidez">Acidez</label><br>
+		  <input type="checkbox" class="item" id="tanino" value="0.1">
+		  <label class="rotulo" for="tanino">Tanino</label><br>
+		  <input type="checkbox" class="item" id="dulcor" value="0.1">
+		  <label class="rotulo" for="dulcor">Dulçor</label><br>
+		  <input type="checkbox" class="item" id="persistencia" value="0.1">
+		  <label class="rotulo" for="persistencia">Persistẽncia</label><br>
+		  <input type="checkbox" class="item" id="retrogosto" value="0.1">
+		  <label class="rotulo" for="retrogosto">Retrogosto</label><br>
+		  <input type="checkbox" class="item" id="complexidade" value="0.1">
+		  <label class="rotulo" for="complexidade">Complexidade</label><br>
+		  <input type="checkbox" class="item" id="evolucao" value="0.1">
+		  <label class="rotulo" for="evolucao">Evolução</label><br>
+		  <input type="checkbox" class="item" id="corpo" value="0.1">
+		  <label class="rotulo" for="corpo">Corpo</label><br>
+		  <input type="checkbox" class="item" id="alcool" value="0.1">
+		  <label class="rotulo" for="alcool">Álcool</label><br>
+		  <input type="checkbox" class="item" id="equilibrio" value="0.1">
+		  <label class="rotulo" for="equilibrio">Equilibrio</label><br>
+	      <p>
+	      <form action="/action_page.php">
+		  <label class="rotulo" class="categoria"> Visual</label><br>
+		  <input type="checkbox" class="item" id="cor" value="0.2">
+		  <label class="rotulo" for="cor">Cor</label><br>
+		  <input type="checkbox" class="item" id="brilho" value="0.2">
+		  <label class="rotulo" for="brilho">Brilho</label><br>
+		  <input type="checkbox" class="item" id="anel" value="0.2">
+		  <label class="rotulo" for="anel">Anel</label><br>
+		  <input type="checkbox" class="item" id="lagrima" value="0.2">
+		  <label class="rotulo" for="lagrima">Lágrima</label><br>
+		  <input type="checkbox" class="item" id="turbidez" value="0.2">
+		  <label class="rotulo" for="turbidez">Turbidez</label><br>
+		  </form>
+	       </p>
+	      <p>
+	      <form action="/action_page.php">
+		  <label class="rotulo" class="categoria"> Olfativa</label><br>
+		  <input type="checkbox" class="item" id="intensidade" value="0.25">
+		  <label class="rotulo" for="intensidade">Intensidade</label><br>
+		  <input type="checkbox" class="item" id="complexidade" value="0.25">
+		  <label class="rotulo" for="complexidade">Complexidade</label><br>
+		  <input type="checkbox" class="item" id="evolucao" value="0.25">
+		  <label class="rotulo" for="evolucao">Evolução</label><br>
+		  <input type="checkbox" class="item" id="alcool2" value="0.25">
+		  <label class="rotulo" for="alcool2">Álcool</label><br>
+		  </form>
+	       </p>
+	      <p>
+	      <form action="/action_page.php">
+		  <label class="rotulo" class="categoria"> Cosmetico</label><br>
+		  <input type="checkbox" class="item" id="rotulo" value="0.25">
+		  <label class="rotulo" for="rotulo">Rótulo</label><br>
+		  <input type="checkbox" class="item" id="rolha" value="0.25">
+		  <label class="rotulo" for="rolha">Rolha</label><br>
+		  <input type="checkbox" class="item" id="garrafa" value="0.25">
+		  <label class="rotulo" for="garrafa">Garrafa</label><br>
+		  <input type="checkbox" class="item" id="protecoes" value="0.25">
+		  <label class="rotulo" for="protecoes">Proteções</label><br>
+		  </form>
+	       </p>
+	      <p>
+	      <form action="/action_page.php">
+		  <label class="rotulo" class="categoria"> Outros</label><br>
+		  <input type="checkbox" class="item" id="custo-beneficio" value="0.25">
+		  <label class="rotulo" for="custo-beneficio">Custo benefício</label><br>
+		  <input type="checkbox" class="item" id="versatilidade" value="0.25">
+		  <label class="rotulo" for="versatilidade">Potencial gastronômico</label><br>
+		  <input type="checkbox" class="item" id="sem-ressaca" value="0.25">
+		  <label class="rotulo" for="sem-ressaca">Sem ressaca</label><br>
+		  <input type="checkbox" class="item" id="recompra" value="0.25">
+		  <label class="rotulo" for="recompra">Compraria de novo</label><br>
+		  </form>
+	       </p>
+	      </div>
+
+		<script>
+		  const checkboxes = document.querySelectorAll('.item');
+		  const pontosDisplay = document.getElementById('pontos');
+
+		  function atualizarPontuacao() {
+		    let total = 0;
+		    checkboxes.forEach(checkbox => {
+		      if (checkbox.checked) {
+			total += parseFloat(checkbox.value);
+		      }
+		    });
+		    pontosDisplay.textContent = total.toFixed(2);
+		  }
+
+		  document.addEventListener('DOMContentLoaded', () => {
+		    pontosDisplay.textContent = '0.0';
+
+		    checkboxes.forEach(checkbox => {
+		      checkbox.checked = false;
+		    });
+		  });
+		  
+		  checkboxes.forEach(checkbox => {
+		    checkbox.addEventListener('change', atualizarPontuacao);
+		  });
+		</script>
+
+
+</body>
+</html>
