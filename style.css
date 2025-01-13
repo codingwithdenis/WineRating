@@ -49,7 +49,7 @@ input[type="checkbox"]:before{
 	left:0;
 	background: #fff;
 	transform: scale(1.1);
-	box-shadow: 0 2px 5px rgba(0,0,0,.2)
+	box-shadow: 0 2px 5px rgba(0,0,0,.2);
 	transition: .5s;
 }
 
@@ -58,12 +58,8 @@ input:checked[type="checkbox"]:before{
 	left: 40px;
 }
 
-.arranjo{
-	display: flex;
-	flex-direction: row;
-}
-
 .colunaPonto{
-	position: fixed;
+	position: sticky;
+	top:0;
 	z-index: 1000;
 }

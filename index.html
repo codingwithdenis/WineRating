@@ -10,13 +10,13 @@
 	      </head>
       <body>
 
-	      <div class="arranjo">
+	<div class="arranjo">
 		<div class="colunaPonto">
 		    <h1 class="pontos" id="pontos">0.0</h1>
 		</div>
 					
-	      <div class="colunaCategorias">
-	      <p>
+	    <div class="colunaCategorias">
+	      <div>
 	      <form action="/action_page.php">
 		  <label class="categoria"> Gustativo</label><br>
 		  <input type="checkbox" class="item" id="acidez" value="0.1">
@@ -39,7 +39,7 @@
 		  <label class="rotulo" for="alcool">Álcool</label><br>
 		  <input type="checkbox" class="item" id="equilibrio" value="0.1">
 		  <label class="rotulo" for="equilibrio">Equilibrio</label><br>
-	      <p>
+	      <div>
 	      <form action="/action_page.php">
 		  <label class="categoria"> Visual</label><br>
 		  <input type="checkbox" class="item" id="cor" value="0.2">
@@ -53,8 +53,8 @@
 		  <input type="checkbox" class="item" id="turbidez" value="0.2">
 		  <label class="rotulo" for="turbidez">Turbidez</label><br>
 		  </form>
-	       </p>
-	      <p>
+	       </div>
+	      <div>
 	      <form action="/action_page.php">
 		  <label class="categoria"> Olfativa</label><br>
 		  <input type="checkbox" class="item" id="intensidade" value="0.25">
@@ -66,8 +66,8 @@
 		  <input type="checkbox" class="item" id="alcool2" value="0.25">
 		  <label class="rotulo" for="alcool2">Álcool</label><br>
 		  </form>
-	       </p>
-	      <p>
+	       </div>
+	      <div>
 	      <form action="/action_page.php">
 		  <label class="categoria"> Cosmetico</label><br>
 		  <input type="checkbox" class="item" id="rotulo" value="0.25">
@@ -79,8 +79,8 @@
 		  <input type="checkbox" class="item" id="protecoes" value="0.25">
 		  <label class="rotulo" for="protecoes">Proteções</label><br>
 		  </form>
-	       </p>
-	      <p>
+	       </div>
+	      <div>
 	      <form action="/action_page.php">
 		  <label class="categoria"> Outros</label><br>
 		  <input type="checkbox" class="item" id="custo-beneficio" value="0.25">
@@ -92,9 +92,9 @@
 		  <input type="checkbox" class="item" id="recompra" value="0.25">
 		  <label class="rotulo" for="recompra">Compraria de novo</label><br>
 		  </form>
-	       </p>
-	      </div>
-	      </div>
+	       </div>
+	     </div>
+	</div>
 		<script>
 		  const checkboxes = document.querySelectorAll('.item');
 		  const pontosDisplay = document.getElementById('pontos');
