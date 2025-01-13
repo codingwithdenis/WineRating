@@ -4,19 +4,22 @@ body{
 
 .pontos{
 	font-family: "Lato", serif;
-	font-weigth: 900;
+	font-weight: 900;
+	font-size: 60px;
 	color: white;
 }
 
 .categoria{
 	font-family: "Lato", serif;
-	font-weigth: 900;
+	font-weight: Bold;
+	font-size: 40px;
 	color: white;
 }
 
 .rotulo{
 	font-family: "Lato", serif;
-	font-weigth: 400;
+	font-weight: Regular;
+	font-size: 30px;
 	color: white;
 }
 
@@ -46,7 +49,7 @@ input[type="checkbox"]:before{
 	background: #fff;
 	transform: scale(1.1);
 	box-shadow: 0 2px 5px rgba(0,0,0,.2)
-	transition: .5;
+	transition: .5s;
 }
 
 
