@@ -25,11 +25,32 @@ body{
 	
 }
 
+.gustativo{
+	margin-right: 40px;
+}
+
+.visual{
+	margin-right: 40px;
+}
+
+.olfativa{
+	margin-right: 40px;
+}
+
+.cosmetico{
+	margin-right: 40px;
+}
+
+.outros{
+	margin-right: 40px;
+}
+
 .rotulo{
 	font-family: "Lato", serif;
 	font-weight: Regular;
 	font-size: 30px;
 	color: white;
+	align-content: center;
 }
 
 input[type="checkbox"]{
